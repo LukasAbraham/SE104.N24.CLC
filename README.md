@@ -28,4 +28,6 @@
     <th align="left"> <a href="21520531@gm.uit.edu.vn" >21520531@gm.uit.edu.vn</a> </th>
   </tr>
 </table>
+<h2> Phân công </h2>
+<li><a href="https://docs.google.com/spreadsheets/d/1QPGm4XPzt9Dyek6tc9wLVvHuCMeF4WCou4Bp36NYuYw/edit?usp=share_link">Link phân công</a></li>
 
