@@ -1,0 +1,87 @@
+{% extends "pages/teams_base.html" %}
+{% load static %}
+{% block title %}Teams{% endblock %}
+
+{% block content %}
+{% if user.is_authenticated %}
+    <div class="icon_logo">
+        <div class="teams_icon">
+                <img src="{% static 'images/teams_logo/Norwich_City.png' %}" class="icon"/>
+                <img src="{% static 'images/teams_logo/Wolves.png' %}" class="icon"/>
+                <button>
+                <a href="#"><img src="{% static 'images/image_insert.png' %}" class="image_insert"/></a>
+                </button>
+        </div>
+        <div class="namepage">
+            <h class="name">Teams</h>
+        </div>
+        <div class="logo">
+            <div class="user">
+                <b class="username">{{username}}</b>
+                <a href="{% url 'logout' %}" class="logout">Log Out</a>
+            </div>
+            <b class="logo_name">Premiere League</b>
+            <b class="season">Season 2022 - 2023</b>
+            <img src="{% static 'images/Premiere-League.png' %}" class="league-image"/>
+        </div>
+    </div>
+    <div class="menu">
+        <ul class="nav-items">
+            <li>
+                <a href="/">Home</a>
+            </li>
+            <li>
+                <a href="/matches">Matches</a>
+            </li>
+            <li>
+                <a href="/teams">Teams</a>
+            </li>
+            <li>
+                <a href="/players">Players</a>
+            </li>
+            <li>
+                <a href="/managers">Managers</a>
+            </li>
+            <li>
+                <a href="/league">League</a>
+            </li>
+        </ul>    
+    </div>
+    <div class="content">
+        <div class="team1">
+            <img src="{% static 'images/clubs/Arsenal.png' %}" class="club">
+            <b class="teamname">Arsenal</b>
+            <b class="stadium">Emirates Stadium</b>
+        </div>
+        <div class="team2">
+            <img src="{% static 'images/clubs/Liverpool.png' %}" class="club">
+            <b class="teamname">Liverpool</b>
+            <b class="stadium">Anfield Stadium</b>
+        </div>
+        <div class="team3">
+            <img src="{% static 'images/clubs/Chelsea.png' %}" class="club">
+            <b class="teamname">Chelsea</b>
+            <b class="stadium">Stamford Bridge</b>
+        </div>
+        <div class="team4">
+            <img src="{% static 'images/clubs/West_Ham_United.png' %}" class="club">
+            <b class="teamname">West Ham United</b>
+            <b class="stadium">London Stadium</b>
+        </div>
+        <div class="team5">
+            <img src="{% static 'images/clubs/MC.png' %}" class="club">
+            <b class="teamname">Manchester United</b>
+            <b class="stadium">Etihad Stadium</b>
+        </div>
+        <div class="team6">
+            <img src="{% static 'images/clubs/Tottenham.png' %}" class="club">
+            <b class="teamname">Tottenham Hotspur</b>
+            <b class="stadium">Tottenham Hotspur Stadium</b>
+        </div>
+    </div>
+{% else %} 
+    <script>
+        window.location.replace("/login/");
+    </script>
+{% endif %}
+{% endblock %}
