@@ -1,0 +1,60 @@
+{% extends "pages/matches_base.html" %}
+{% load static %}
+{% block title %}Matches{% endblock %}
+
+{% block content %}
+{% if user.is_authenticated %}
+    <div class="icon_logo">
+        <div class="teams_icon">
+                <img src="{% static 'images/teams_logo/Norwich_City.png' %}" class="icon"/>
+                <img src="{% static 'images/teams_logo/Wolves.png' %}" class="icon"/>
+                <button>
+                <a href="#"><img src="{% static 'images/image_insert.png' %}" class="image_insert"/></a>
+                </button>
+        </div>
+        <div class="namepage">
+            <h class="name">Matches</h>
+        </div>
+        <div class="logo">
+            <div class="user">
+                <b class="username">{{username}}</b>
+                <a href="{% url 'logout' %}" class="logout">Log Out</a>
+            </div>
+            <b class="logo_name">Premiere League</b>
+            <b class="season">Season 2022 - 2023</b>
+            <img src="{% static 'images/Premiere-League.png' %}" class="league-image"/>
+        </div>
+    </div>
+    <div class="menu">
+        <ul class="nav-items">
+            <li>
+                <a href="/">Home</a>
+            </li>
+            <li>
+                <a href="/matches">Matches</a>
+            </li>
+            <li>
+                <a href="/teams">Teams</a>
+            </li>
+            <li>
+                <a href="/players">Players</a>
+            </li>
+            <li>
+                <a href="/managers">Managers</a>
+            </li>
+            <li>
+                <a href="/league">League</a>
+            </li>
+        </ul>    
+    </div>
+    <div class="content">
+        <div class="standings">
+
+        </div>
+    </div>
+{% else %} 
+    <script>
+        window.location.replace("/login/");
+    </script>
+{% endif %}
+{% endblock %}
